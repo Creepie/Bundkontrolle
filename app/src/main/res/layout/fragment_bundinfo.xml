@@ -49,6 +49,7 @@
         android:layout_marginEnd="10dp"
         android:ems="10"
         android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/eT_bundNummer"
         app:layout_constraintEnd_toStartOf="@+id/bT_suchen"
         app:layout_constraintStart_toEndOf="@+id/eT_bundNummer"
         app:layout_constraintTop_toTopOf="@+id/eT_bundNummer" />
@@ -105,10 +106,7 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rV_allgemeineInfos"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp" />
+                android:layout_height="match_parent" />
         </LinearLayout>
     </ScrollView>
 
@@ -154,11 +152,7 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rV_inspektion"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="15dp" />
+                android:layout_height="match_parent" />
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
