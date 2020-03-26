@@ -3,8 +3,6 @@ package com.example.bundkontrolle
 import android.os.Bundle
 import android.view.Menu
 import android.widget.ArrayAdapter
-import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -14,7 +12,7 @@ import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
-import kotlinx.android.synthetic.main.fragment_home.*
+import kotlinx.android.synthetic.main.fragment_bundkontrolle.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -38,11 +36,11 @@ class MainActivity : AppCompatActivity() {
         navView.setupWithNavController(navController)
 
         //for testing
-        //setContentView(R.layout.fragment_home)
+        //setContentView(R.layout.fragment_bundkontrolle)
         val ablageplaetze = resources.getStringArray(R.array.Ablageplatz)
-        if (sP_Ablageplatz != null){
+        if (sP_ablageplatz != null){
             val adapter = ArrayAdapter(this,android.R.layout.simple_spinner_item,ablageplaetze)
-            sP_Ablageplatz.adapter = adapter
+            sP_ablageplatz.adapter = adapter
         }
     }
 

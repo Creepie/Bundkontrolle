@@ -21,8 +21,8 @@ class GalleryFragment : Fragment() {
     ): View? {
         galleryViewModel =
                 ViewModelProviders.of(this).get(GalleryViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_gallery, container, false)
-        val textView: TextView = root.findViewById(R.id.text_gallery)
+        val root = inflater.inflate(R.layout.fragment_bundinfo, container, false)
+        val textView: TextView = root.findViewById(R.id.tV_bundNummer)
         galleryViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
