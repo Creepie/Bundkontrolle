@@ -12,9 +12,9 @@
         android:layout_height="0dp"
         android:layout_marginEnd="10dp"
         android:background="@android:drawable/arrow_up_float"
-        app:layout_constraintBottom_toBottomOf="@+id/tV_Inspektion"
+        app:layout_constraintBottom_toBottomOf="@+id/tV_inspektion"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tV_Inspektion" />
+        app:layout_constraintTop_toTopOf="@+id/tV_inspektion" />
 
     <TextView
         android:id="@+id/tV_bundNummer"
@@ -86,8 +86,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/eT_bundNummer" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rV_allgemeineInfos"
+    <ScrollView
+        android:id="@+id/sV_allgemeineInfos"
         android:layout_width="0dp"
         android:layout_height="150dp"
         android:layout_marginStart="10dp"
@@ -95,10 +95,25 @@
         android:layout_marginEnd="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tV_allgemeineInfos" />
+        app:layout_constraintTop_toBottomOf="@+id/tV_allgemeineInfos">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rV_allgemeineInfos"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp" />
+        </LinearLayout>
+    </ScrollView>
 
     <TextView
-        android:id="@+id/tV_Inspektion"
+        android:id="@+id/tV_inspektion"
         android:layout_width="0dp"
         android:layout_height="30dp"
         android:layout_marginStart="10dp"
@@ -106,20 +121,7 @@
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="@+id/tV_allgemeineInfos"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rV_allgemeineInfos" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rV_Inspektion"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="15dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tV_Inspektion" />
+        app:layout_constraintTop_toBottomOf="@+id/sV_allgemeineInfos" />
 
     <Button
         android:id="@+id/bT_allgemeinKlappen"
@@ -130,4 +132,33 @@
         app:layout_constraintBottom_toBottomOf="@+id/tV_allgemeineInfos"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/tV_allgemeineInfos" />
+
+    <ScrollView
+        android:id="@+id/sV_inspektion"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tV_inspektion">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rV_inspektion"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="15dp" />
+        </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
