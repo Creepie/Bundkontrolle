@@ -2,6 +2,7 @@ package com.example.bundkontrolle
 
 import android.os.Bundle
 import android.view.Menu
+import android.widget.ArrayAdapter
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
@@ -13,6 +14,7 @@ import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import kotlinx.android.synthetic.main.fragment_home.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -38,6 +40,14 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow), drawerLayout)
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+        //for testing
+        //setContentView(R.layout.fragment_home)
+        val ablageplaetze = resources.getStringArray(R.array.Ablageplatz)
+        if (sP_Ablageplatz != null){
+            val adapter = ArrayAdapter(this,android.R.layout.simple_spinner_item,ablageplaetze)
+            sP_Ablageplatz.adapter = adapter
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

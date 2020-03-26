@@ -14,4 +14,12 @@
     <string name="home_second">Home Second</string>
 
     <string name="Ablageplatz">Ablageplatz:</string>
+    <string name="Bunddaten">Bunddaten:</string>
+    <string name="Inspektionsdaten">Inspektionsdaten:</string>
+
+    <string-array name="Ablageplatz">
+        <item>Ablage1</item>
+        <item>Ablage2</item>
+        <item>Ablage3</item>
+    </string-array>
 </resources>
