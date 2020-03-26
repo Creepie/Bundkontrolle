@@ -42,11 +42,13 @@ class MainActivity : AppCompatActivity() {
         // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.main, menu)
 
+        //spinner in Bundkontrolle
         val ablageplaetze = resources.getStringArray(R.array.Ablageplatz)
         if (sP_ablageplatz != null){
             val adapter = ArrayAdapter(this,android.R.layout.simple_spinner_item,ablageplaetze)
             sP_ablageplatz.adapter = adapter
         }
+
         return true
     }
 
@@ -55,4 +57,5 @@ class MainActivity : AppCompatActivity() {
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
 
     }
+
 }
