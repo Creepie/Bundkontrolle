@@ -22,4 +22,28 @@
         <item>Ablage2</item>
         <item>Ablage3</item>
     </string-array>
+
+    <string-array name="Fehlercode">
+        <item>test1</item>
+        <item>test2</item>
+        <item>test3</item>
+    </string-array>
+
+    <string-array name="Intensität">
+        <item>test1</item>
+        <item>test2</item>
+        <item>test3</item>
+    </string-array>
+
+    <string-array name="Lage_quer">
+        <item>test1</item>
+        <item>test2</item>
+        <item>test3</item>
+    </string-array>
+
+    <string-array name="Häufigkeit">
+        <item>test1</item>
+        <item>test2</item>
+        <item>test3</item>
+    </string-array>
 </resources>
